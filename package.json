@@ -1,0 +1,37 @@
+{
+  "name": "handlebars-helper-rel",
+  "description": "Handlebars helper for generating a relative link from the current page to the specified page.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/helpers/handlebars-helper-rel",
+  "author": {
+    "name": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/helpers/handlebars-helper-rel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/helpers/handlebars-helper-rel/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/helpers/handlebars-helper-rel/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "./index.js",
+  "dependencies": {
+    "lodash": "~2.2.1"
+  },
+  "keywords": [
+    "assemble",
+    "handlebars helper",
+    "handlebars",
+    "helper",
+    "relative",
+    "relative url",
+    "relative path",
+    "relative link"
+  ]
+}
