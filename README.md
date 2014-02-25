@@ -101,16 +101,14 @@ Then you can omit `foo/bar` from the paths defined in your templates:
 </nav>
 ```
 
-
-
 ## Author
 
 **Jon Schlinkert**
 
-+ [github/Jon Schlinkert](http://github.com/Jon Schlinkert)
-+ [twitter/Jon Schlinkert](http://twitter.com/Jon Schlinkert)
++ [github/jonschlinkert](http://github.com/jonschlinkert)
++ [twitter/jonschlinkert](http://twitter.com/jonschlinkert)
 
 ## License and Copyright
 
+Copyright (c) 2014 [Jon Schlinkert](http://github.com/jonschlinkert), contributors.
 Licensed under the [MIT License](./LICENSE-MIT)
-Copyright (c) Jon Schlinkert, contributors.
