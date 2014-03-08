@@ -20,11 +20,12 @@ module.exports.register = function (Handlebars, options, params) {
    * @usage: <a href="{{rel 'dist/foo.html'}}>Foo</a>
    */
   Handlebars.registerHelper('rel', function (to) {
-    var context = _.extend(opts.data, this);
+    var context = _.extend(opts, opts.data, this);
 
     // If the `site` obj exists in the config, and `site.root`
     // exists, then join the `site.root` to each filename
-    to = context.site ? path.join(context.site.root, to) : to;
+    var destBase = context.site.root || context.site.base;
+    to = context.site ? path.join(destBase, to) : to;
 
     var from = path.dirname(context.page.dest);
     var filename = path.basename(to);
