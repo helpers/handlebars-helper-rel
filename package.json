@@ -1,7 +1,7 @@
 {
   "name": "handlebars-helper-rel",
   "description": "Handlebars helper for generating a relative link from the current page to the specified page.",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "homepage": "https://github.com/helpers/handlebars-helper-rel",
   "author": {
     "name": "Jon Schlinkert",

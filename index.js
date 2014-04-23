@@ -9,20 +9,15 @@
 var path = require('path');
 var _ = require('lodash');
 
-// Export helpers
-module.exports.register = function (Handlebars, options, params) {
+module.exports = function (config) {
+  var Handlebars = config.Handlebars;
+  var opts = config.options;
 
-  var grunt = params.grunt;
-  var opts = options;
+  var helpers = {};
+  helpers.rel = function (to) {
+    var context = _.extend({}, opts, opts.data, this);
 
-  /**
-   * Generate a relative link from the "current page" to the specified page
-   * @usage: <a href="{{rel 'dist/foo.html'}}>Foo</a>
-   */
-  Handlebars.registerHelper('rel', function (to) {
-    var context = _.extend(opts, opts.data, this);
-
-    // If the `site` obj exists in the config, and `site.root`
+    // if the 'site' obj exists in the config, and `site.root`
     // exists, then join the `site.root` to each filename
     var destBase = context.site.root || context.site.base;
     to = context.site ? path.join(destBase, to) : to;
@@ -33,6 +28,8 @@ module.exports.register = function (Handlebars, options, params) {
     var relativePath = path.relative(from, path.dirname(to));
     var dest = path.join(relativePath, filename).replace(/\\/g, '/');
     return new Handlebars.SafeString(dest);
-  });
+  };
 
+  return helpers;
 };
+
