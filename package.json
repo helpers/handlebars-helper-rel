@@ -22,16 +22,15 @@
   ],
   "main": "./index.js",
   "dependencies": {
-    "lodash": "~2.2.1"
+    "lodash": "~2.4.1"
   },
   "keywords": [
     "assemble",
-    "handlebars helper",
     "handlebars",
     "helper",
+    "link",
+    "path",
     "relative",
-    "relative url",
-    "relative path",
-    "relative link"
+    "url"
   ]
 }
